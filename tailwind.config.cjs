@@ -1,3 +1,6 @@
+/* global module, require */
+/* eslint-disable @typescript-eslint/no-require-imports */
+
 module.exports = {
   darkMode: 'class',
   content: [

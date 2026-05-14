@@ -1,11 +1,14 @@
+/* global process */
+
 import fs from 'fs'
 import path from 'path'
 
 const src = path.resolve('c:/Users/Guilherme/Downloads/tailwind-plus-spotlight/spotlight-ts/src/images')
-const dest = path.resolve(new URL(import.meta.url).pathname, '../public/images/spotlight')
 
 function ensureDir(dir) {
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true })
+  }
 }
 
 function copyRecursive(srcPath, destPath) {
@@ -13,9 +16,12 @@ function copyRecursive(srcPath, destPath) {
     console.error('Source not found:', srcPath)
     process.exit(1)
   }
+
   const stat = fs.statSync(srcPath)
+
   if (stat.isDirectory()) {
     ensureDir(destPath)
+
     for (const entry of fs.readdirSync(srcPath)) {
       copyRecursive(path.join(srcPath, entry), path.join(destPath, entry))
     }

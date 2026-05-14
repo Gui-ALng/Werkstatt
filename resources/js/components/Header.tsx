@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
 import { Popover, PopoverButton, PopoverBackdrop, PopoverPanel } from '@headlessui/react'
-import clsx from 'clsx'
 import { Link } from '@inertiajs/react'
-import { Container } from './Container'
+import clsx from 'clsx'
+import React, { useEffect, useRef } from 'react'
 import { useAppearance } from '@/hooks/use-appearance'
+import { Container } from './Container'
 
 function CloseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -103,7 +103,6 @@ export function Header() {
   const isHomePage = typeof window !== 'undefined' && window.location.pathname === '/'
 
   const headerRef = useRef<HTMLDivElement | null>(null)
-  const avatarRef = useRef<HTMLDivElement | null>(null)
   const isInitial = useRef(true)
 
   useEffect(() => {
