@@ -2,6 +2,8 @@
 
 Portfólio pessoal para apresentar projetos, experiências e formas de contato, construído com Laravel 13, React, Inertia e Tailwind CSS.
 
+Escolhi o nome Werkstatt pois siginifica estação de trabalho em alemão, e todo o intuito deste projeto é ser como uma vitrine de das minhas experiências 
+
 Aplicação Laravel 13 com React, Inertia e Tailwind CSS.
 
 ## Arquitetura
